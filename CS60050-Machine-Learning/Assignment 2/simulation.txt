@@ -1,0 +1,235 @@
+============= READING DATA ============
+
+Time elapsed  =  0.8716778755187988 s
+
+ ============= DATA READ ============
+
+
+
+ ============= FEATURES ============
+
+
+['case_id',
+ 'Hospital_code',
+ 'Hospital_type_code',
+ 'City_Code_Hospital',
+ 'Hospital_region_code',
+ 'Available Extra Rooms in Hospital',
+ 'Department',
+ 'Ward_Type',
+ 'Ward_Facility_Code',
+ 'Bed Grade',
+ 'patientid',
+ 'City_Code_Patient',
+ 'Type of Admission',
+ 'Severity of Illness',
+ 'Visitors with Patient',
+ 'Age',
+ 'Admission_Deposit',
+ 'Stay']
+
+
+        /////////////////////////////////
+        //                             //
+        //         SOLVING Q1          //
+        //                             //
+        /////////////////////////////////
+
+
+
+ ================ HANDLING MISSING DATA ============
+
+Time elapsed  =  1.189878225326538 s
+
+ ================= ENCODING DATASET ================
+
+Time elapsed  =  136.19835329055786 s
+
+ ================= FORMATTING DATA =================
+
+Time elapsed  =  137.89182305335999 s
+
+ ============== NORMALIZING DATASET ================
+
+Time elapsed  =  139.73087072372437 s
+
+ ============= DATA PROCESSING FINISHED ============
+
+
+============= TRAIN TEST SPLIT COMPLETE ============
+
+train data size: 254750, test data size = 63688
+
+
+NUMBER OF FOLDS (cross validation) = 5
+
+============== TRAINING STARTED ============
+
+Time elapsed  =  205.15478944778442 s
+
+ ============= TRAINING FINISHED ============
+
+
+        ////////////////////////////////
+        /////////    SCORES    /////////
+        ////////////////////////////////
+
+ITERATION 1  ===>   SCORE = 36.19038272816486
+ITERATION 2  ===>   SCORE = 35.79391560353288
+ITERATION 3  ===>   SCORE = 35.87831207065751
+ITERATION 4  ===>   SCORE = 35.89793915603533
+ITERATION 5  ===>   SCORE = 36.206084396467126
+
+MODEL SCORES:
+Train Accuracy: 35.993326790971544
+Test  Accuracy: 36.106750392464676
+
+
+
+        /////////////////////////////////
+        //                             //
+        //         SOLVING Q2          //
+        //                             //
+        /////////////////////////////////
+
+
+Number of Components selected:13
+Variance captured: 0.9549916988284246
+
+============== TRAINING STARTED =============
+
+Time elapsed  =  275.50851917266846 s
+
+ ============= TRAINING FINISHED ============
+
+
+        ////////////////////////////////
+        /////////    SCORES    /////////
+        ////////////////////////////////
+
+ITERATION 1  ===>   SCORE = 35.75638506876228
+ITERATION 2  ===>   SCORE = 38.70333988212181
+ITERATION 3  ===>   SCORE = 33.20235756385069
+ITERATION 4  ===>   SCORE = 31.43418467583497
+ITERATION 5  ===>   SCORE = 36.73870333988212
+
+MODEL SCORES:
+Train Accuracy: 35.16699410609037
+Test  Accuracy: 29.67032967032967
+
+NOTE: Plots will be shown after Q3 is finished
+
+
+        /////////////////////////////////
+        //                             //
+        //         SOLVING Q3          //
+        //                             //
+        /////////////////////////////////
+
+
+Time elapsed  =  290.9160990715027 s
+
+ ============= OUTLIERS REMOVED ============
+
+train data size: 254750
+
+
+MODEL SCORES:
+Train Accuracy: 34.53831041257367
+Test  Accuracy: 37.51962323390895
+
+============= SEQUENTIAL BACKWARD SELECTION STARTED ==============
+
+Checking for the removal of feature 1
+Improved Accuracy: 36.82659932659932
+Label -> City_Code_Patient <- Dropped
+
+Checking for the removal of feature 2
+Improved Accuracy: 37.33164983164983
+Label -> Department <- Dropped
+
+Checking for the removal of feature 3
+Improved Accuracy: 37.83670033670033
+Label -> Hospital_region_code <- Dropped
+
+Checking for the removal of feature 4
+Improved Accuracy: 38.005050505050505
+Label -> Hospital_type_code <- Dropped
+
+Checking for the removal of feature 5
+Improved Accuracy: 38.46801346801347
+Label -> Severity of Illness <- Dropped
+
+Checking for the removal of feature 6
+Improved Accuracy: 38.804713804713806
+Label -> case_id <- Dropped
+
+Checking for the removal of feature 7
+Improved Accuracy: 39.015151515151516
+Label -> Age <- Dropped
+
+Checking for the removal of feature 8
+Improved Accuracy: 39.225589225589225
+Label -> Ward_Facility_Code <- Dropped
+
+Checking for the removal of feature 9
+No more feaures remaining to drop
+
+Time elapsed  =  2899.3444883823395 s
+
+ ============= SEQUENTIAL BACKWARD SELECTION COMPLETED ============
+Accuracy: 39.225589225589225
+
+============== REMOVED FEATURES ==============
+['City_Code_Patient',
+ 'Department',
+ 'Hospital_region_code',
+ 'Hospital_type_code',
+ 'Severity of Illness',
+ 'case_id',
+ 'Age',
+ 'Ward_Facility_Code']
+
+============   SELECTED FEATURES   ===========
+['Hospital_code',
+ 'City_Code_Hospital',
+ 'Available Extra Rooms in Hospital',
+ 'Ward_Type',
+ 'Bed Grade',
+ 'patientid',
+ 'Type of Admission',
+ 'Visitors with Patient',
+ 'Admission_Deposit',
+ 'Stay']
+
+ ==============   TARGET FEATURE  ==============
+'Stay'
+
+Time elapsed  =  2900.797280550003 s
+
+ ============= DATA NORMALIZED ============
+
+
+============== TRAINING STARTED =============
+
+Time elapsed  =  2949.0544555187225 s
+
+ ============= TRAINING FINISHED ============
+
+
+        ////////////////////////////////
+        /////////    SCORES    /////////
+        ////////////////////////////////
+
+ITERATION 1  ===>   SCORE = 38.10526315789474
+ITERATION 2  ===>   SCORE = 43.57894736842105
+ITERATION 3  ===>   SCORE = 37.473684210526315
+ITERATION 4  ===>   SCORE = 39.1578947368421
+ITERATION 5  ===>   SCORE = 39.578947368421055
+
+MODEL SCORES:
+Train Accuracy: 39.578947368421055
+Test  Accuracy: 30.298273155416013
+
+========== ALL QUESTIONS SOLVED SUCCESSFULLY !! =========
+TIME TAKEN = 3013.264657497406006 s
