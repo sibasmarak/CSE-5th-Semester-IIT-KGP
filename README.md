@@ -1,4 +1,5 @@
-# CSE-5th-Semester-IIT-KGP
+# CSE-5th-Semester-IIT-KGP  
+### `Disclaimer:` Do not copy codes though. Heavy penalization for plagiarism.   
 Programming assignments and their solution for some courses offered by Department of Computer Science and Engineering, IIT Kharagpur.  
 `Semester:` 5<sup>th</sup> Semester  
 `Session:` 2020-21   
